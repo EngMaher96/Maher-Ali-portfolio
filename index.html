@@ -442,8 +442,7 @@
     <img src="restaurant-system.png" alt="Restaurant System Project" style="width:320px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.3);">
   </div>
 </div>
-
-    <div class="project" data-aos="fade-right">
+<div class="project" data-aos="fade-right">
   <div class="text">
     <h2>2019 – Basma (SwiftUI Redesign)</h2>
     <p>
@@ -457,11 +456,11 @@
     </p>
   </div>
 
-  <!-- Landscape Mockup with 2 videos -->
+  <!-- Landscape with 2 videos -->
   <div class="mockup landscape" data-aos="fade-left">
     <div class="video-container">
-      <video src="basma2019-1.mp4" autoplay muted playsinline onended="this.nextElementSibling.style.display='block'; this.style.display='none';"></video>
-      <video src="basma2019-2.mp4" muted playsinline style="display:none;" autoplay loop></video>
+      <video class="v1" src="basma2019-1.mp4" autoplay muted playsinline></video>
+      <video class="v2" src="basma2019-2.mp4" muted playsinline style="display:none;"></video>
     </div>
   </div>
 </div>
@@ -516,6 +515,47 @@ setInterval(() => {
 
 </script>
 
+  <script>
+  // Loop between two videos forever (v1 -> v2 -> v1 ...)
+  document.querySelectorAll('.video-container').forEach(vc => {
+    const v1 = vc.querySelector('video.v1');
+    const v2 = vc.querySelector('video.v2');
+
+    if (!v1 || !v2) return;
+
+    // Helpers
+    function show(el){ el.style.display = 'block'; }
+    function hide(el){ el.style.display = 'none'; }
+
+    function playV1() {
+      v2.pause();
+      hide(v2);
+      show(v1);
+      v1.currentTime = 0;
+      v1.play().catch(()=>{ /* autoplay might be blocked without muted */ });
+    }
+
+    function playV2() {
+      v1.pause();
+      hide(v1);
+      show(v2);
+      v2.currentTime = 0;
+      v2.play().catch(()=>{});
+    }
+
+    // When each ends, switch to the other
+    v1.addEventListener('ended', playV2);
+    v2.addEventListener('ended', playV1);
+
+    // Safety: ensure v1 starts visible (iOS needs muted + playsinline, already set)
+    show(v1);
+    hide(v2);
+    // If autoplay was blocked, tap-to-play fallback
+    [v1, v2].forEach(v => {
+      v.addEventListener('click', () => v.play().catch(()=>{}));
+    });
+  });
+</script>
   
 </body>
 </html>
