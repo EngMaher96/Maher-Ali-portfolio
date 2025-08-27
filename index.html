@@ -195,6 +195,33 @@
       border-radius: 25px;
     }
 
+     .mockup.landscape {
+      width: 600px;
+      height: 300px;
+      border-radius: 25px;
+      background: black;
+      padding: 10px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .mockup.landscape .screens {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mockup.landscape img {
+      flex: 1;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -278,17 +305,33 @@
   </div>
 </div>
 
+<div class="project" data-aos="fade-left">
+  <div class="text">
+    <h2>2014 – Basma (First App Store Launch)</h2>
+    <p>
+      <em>Basma</em> was the first app I successfully launched on the Apple App Store, marking the start of my official journey as an iOS developer. 
+      It was also the first time I registered on the Apple Developer Program and navigated Apple’s strict publishing requirements.
+    </p>
+    <p>
+      The app was a simple yet engaging educational platform designed to teach Arabic and English letters. 
+      When tapping on a letter, children could hear the correct pronunciation and see how it’s articulated. 
+      The app also included fun activities such as a drawing pad and a piano feature to keep learning interactive and enjoyable.
+    </p>
+    <p>
+      This project taught me how to build apps that meet Apple’s design and technical guidelines, and it gave me the confidence to move forward as a published iOS developer.
+    </p>
+  </div>
 
-    <div class="project" data-aos="fade-left">
-      <div class="text">
-        <h2>2023 – App Two</h2>
-        <p>This project focused on integrating Firebase authentication, real-time database, 
-        and push notifications. It became a fully functional social app.</p>
-      </div>
-      <div class="mockup" data-aos="fade-right">
-        <video src="demo.mp4" autoplay muted loop></video>
-      </div>
+  <!-- Landscape Mockup with 3 images -->
+  <div class="mockup landscape" data-aos="fade-right">
+    <div class="screens">
+      <img src="basma1.png" alt="Basma Screenshot 1">
+      <img src="basma2.png" alt="Basma Screenshot 2">
+      <img src="basma3.png" alt="Basma Screenshot 3">
     </div>
+  </div>
+</div>
+
 
     <div class="project" data-aos="fade-right">
       <div class="text">
