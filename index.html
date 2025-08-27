@@ -254,7 +254,18 @@
   100% { opacity: 0; }
 }
 
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
 
     /* Footer */
     footer {
@@ -432,6 +443,28 @@
   </div>
 </div>
 
+    <div class="project" data-aos="fade-right">
+  <div class="text">
+    <h2>2019 – Basma (SwiftUI Redesign)</h2>
+    <p>
+      In 2019, I redesigned <em>Basma</em> using Apple’s new SwiftUI framework. 
+      This was my first serious step into focusing on UI/UX design and experimenting with smooth, interactive user interfaces. 
+      I also started learning the basics of animations, which made the app feel more alive and engaging.
+    </p>
+    <p>
+      For this version, I created a fresh, modern interface and improved usability while keeping the core idea 
+      of teaching Arabic and English letters with interactive activities.
+    </p>
+  </div>
+
+  <!-- Landscape Mockup with 2 videos -->
+  <div class="mockup landscape" data-aos="fade-left">
+    <div class="video-container">
+      <video src="basma2019-1.mp4" autoplay muted playsinline onended="this.nextElementSibling.style.display='block'; this.style.display='none';"></video>
+      <video src="basma2019-2.mp4" muted playsinline style="display:none;" autoplay loop></video>
+    </div>
+  </div>
+</div>
 
   </div>
 
