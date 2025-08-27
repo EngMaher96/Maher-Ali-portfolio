@@ -229,20 +229,22 @@
   height: 100%;
   overflow: hidden;
 }
-
+    
 .slides {
   display: flex;
-  width: 100%;
+  width: 300%; /* لأن عندك 3 صور */
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .slides img {
-  min-width: 100%; 
+  width: 100%;   /* كل صورة تاخذ العرض الكامل للـ mockup */
+  flex-shrink: 0;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
 }
+
 
 
 /* Buttons */
@@ -417,25 +419,26 @@
 
   <script>
   let currentSlide = 0;
-  const slides = document.querySelector(".slides");
-  const totalSlides = slides.children.length;
+const slides = document.querySelector(".slides");
+const totalSlides = slides.children.length;
 
-  function showSlide(index) {
-    if (index >= totalSlides) currentSlide = 0;
-    else if (index < 0) currentSlide = totalSlides - 1;
-    else currentSlide = index;
+function showSlide(index) {
+  if (index >= totalSlides) currentSlide = 0;
+  else if (index < 0) currentSlide = totalSlides - 1;
+  else currentSlide = index;
 
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
 
-  // Buttons
-  document.querySelector(".prev").addEventListener("click", () => showSlide(currentSlide - 1));
-  document.querySelector(".next").addEventListener("click", () => showSlide(currentSlide + 1));
+// Buttons
+document.querySelector(".prev").addEventListener("click", () => showSlide(currentSlide - 1));
+document.querySelector(".next").addEventListener("click", () => showSlide(currentSlide + 1));
 
-  // Auto play every 2s
-  setInterval(() => {
-    showSlide(currentSlide + 1);
-  }, 2000);
+// Auto play every 2s
+setInterval(() => {
+  showSlide(currentSlide + 1);
+}, 2000);
+
 </script>
 
   
