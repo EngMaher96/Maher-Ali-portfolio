@@ -1,675 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Maher Ali Portfolio</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شروط الاستخدام وسياسة الخصوصية - محاكيات بسمة</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 0;
+    * {
+      box-sizing: border-box;
     }
 
-    /* Hero Section */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+      background: linear-gradient(180deg, #f6eaff 0%, #eaf7ff 45%, #fff7d9 100%);
+      color: #4b3f72;
+      line-height: 1.8;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px 16px 48px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
     .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #141e30, #243b55); /* أزرق غامق */
+      background: linear-gradient(145deg, #b987ff, #ff9fdc);
+      border-radius: 34px;
+      padding: 34px 22px;
       color: white;
-      padding: 20px;
+      box-shadow: 0 18px 35px rgba(123, 78, 190, 0.25);
+      border: 4px solid rgba(255, 255, 255, 0.45);
+      position: relative;
       overflow: hidden;
     }
 
-    .hero img {
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      margin-bottom: 20px;
-      z-index: 2;
+      background: rgba(255, 255, 255, 0.18);
+      filter: blur(1px);
+    }
+
+    .hero::before {
+      top: -50px;
+      right: -30px;
+    }
+
+    .hero::after {
+      bottom: -70px;
+      left: -35px;
     }
 
     .hero h1 {
-      font-size: 40px;
-      margin: 10px 0;
-      z-index: 2;
-    }
-
-    .tagline {
-      font-size: 22px;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 20px;
-      z-index: 2;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 650px;
-      margin: 10px auto;
-      line-height: 1.6;
-      z-index: 2;
+      margin: 0 0 10px;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 900;
+      text-shadow: 0 4px 0 rgba(90, 52, 150, 0.18);
       position: relative;
-      color: white;
-    }
-
-    /* Buttons with icons */
-    .buttons {
-      margin-top: 25px;
-      z-index: 2;
-      position: relative;
-    }
-
-    .buttons a {
-      display: inline-flex;
-      align-items: center;
-      margin: 0 10px;
-      padding: 12px 28px;
-      border-radius: 30px;
-      background: white;
-      color: #0077b5;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-      font-size: 16px;
-    }
-
-    .buttons a i {
-      margin-right: 8px;
-      font-size: 18px;
-    }
-
-    .buttons a.github { color: #333; }
-    .buttons a.email { color: #2196f3; }
-
-    .buttons a:hover {
-      background: #f0f0f0;
-    }
-
-    /* Down Arrow */
-    .scroll-down {
-      margin-top: 40px;
-      font-size: 18px;
-      animation: bounce 1.5s infinite;
-      cursor: pointer;
-      z-index: 2;
-      position: relative;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(10px); }
-      60% { transform: translateY(5px); }
-    }
-
-    /* Animated Bubbles */
-    .bubbles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
       z-index: 1;
     }
 
-    .bubbles span {
-      position: absolute;
-      bottom: -100px;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      animation: rise 20s infinite ease-in;
+    .hero p {
+      margin: 0;
+      font-size: 17px;
+      opacity: 0.95;
+      position: relative;
+      z-index: 1;
     }
 
-    .bubbles span:nth-child(1) { left: 20%; width: 30px; height: 30px; animation-duration: 12s; }
-    .bubbles span:nth-child(2) { left: 40%; width: 20px; height: 20px; animation-duration: 15s; }
-    .bubbles span:nth-child(3) { left: 60%; width: 50px; height: 50px; animation-duration: 18s; }
-    .bubbles span:nth-child(4) { left: 80%; width: 25px; height: 25px; animation-duration: 10s; }
-    .bubbles span:nth-child(5) { left: 10%; width: 40px; height: 40px; animation-duration: 20s; }
-    .bubbles span:nth-child(6) { left: 70%; width: 15px; height: 15px; animation-duration: 14s; }
-
-    @keyframes rise {
-      0% { transform: translateY(0) scale(1); opacity: 0.4; }
-      50% { opacity: 0.8; }
-      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.26);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      font-weight: 800;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Projects Section */
-    .project {
+    .card {
+      margin-top: 22px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: 0 14px 28px rgba(110, 88, 160, 0.16);
+      border: 3px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .tabs {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 80px auto;
-      gap: 40px;
-      max-width: 1100px;
-      padding: 0 20px;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
     }
 
-    .project:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .text {
+    .tab-button {
       flex: 1;
-      max-width: 500px;
-    }
-
-    .text h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    .text p {
+      min-width: 180px;
+      border: none;
+      cursor: pointer;
+      border-radius: 22px;
+      padding: 15px 18px;
       font-size: 16px;
-      line-height: 1.6;
-      color: #555;
+      font-weight: 900;
+      color: #6b4fa5;
+      background: linear-gradient(180deg, #ffffff, #f1e4ff);
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.9), 0 8px 0 #d9b8ff, 0 12px 20px rgba(95, 65, 150, 0.16);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .mockup {
-      width: 250px;
-      height: 500px;
-      border-radius: 35px;
-      background: black;
-      padding: 10px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-      overflow: hidden;
+    .tab-button.active {
+      color: white;
+      background: linear-gradient(180deg, #ff9ddd, #9b78ff);
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 8px 0 #7a58d3, 0 12px 20px rgba(95, 65, 150, 0.18);
     }
 
-    .mockup img,
-    .mockup video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 25px;
+    .tab-button:active {
+      transform: translateY(5px);
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 3px 0 #b995ed, 0 8px 14px rgba(95, 65, 150, 0.14);
     }
 
-    .mockup.landscape .screens {
-      display: flex;
-      gap: 10px;
-      width: 100%;
-      height: 100%;
+    .section {
+      display: none;
+      animation: pop 0.25s ease;
     }
 
-    .mockup.landscape img {
-      flex: 1;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
+    .section.active {
+      display: block;
     }
 
-/* Landscape mockup (container) */
-.mockup.landscape {
-  width: 600px;
-  height: 300px;
-  border-radius: 25px;
-  background: black;
-  padding: 10px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    @keyframes pop {
+      from { opacity: 0; transform: translateY(8px) scale(0.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
-/* Slideshow stacked images */
-.slideshow {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+    h2 {
+      margin-top: 8px;
+      color: #7d5be8;
+      font-size: 26px;
+    }
 
-.slideshow img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  opacity: 0;
-  animation: slideshow 6s infinite; /* 3 صور × 2 ثانية */
-}
+    h3 {
+      color: #ff70bd;
+      margin-top: 26px;
+      font-size: 20px;
+    }
 
-/* Control timing for each image */
-.slideshow img:nth-child(1) { animation-delay: 0s; }
-.slideshow img:nth-child(2) { animation-delay: 2s; }
-.slideshow img:nth-child(3) { animation-delay: 4s; }
+    p, li {
+      font-size: 16px;
+    }
 
-@keyframes slideshow {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  30% { opacity: 1; }
-  35% { opacity: 0; }
-  100% { opacity: 0; }
-}
+    ul {
+      padding-right: 22px;
+    }
 
-.video-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+    .notice {
+      background: linear-gradient(180deg, #fff9d8, #fff2ab);
+      border-radius: 24px;
+      padding: 18px;
+      border: 2px solid #ffe88d;
+      color: #735d28;
+      font-weight: 700;
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.75);
+    }
 
-.video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-    /* === Mall App (Vertical Mockup + 2-image loop) === */
-.mall-mockup {
-  width: 250px;              /* اضبطها لو تبغى أكبر/أصغر */
-  height: 500px;
-  border-radius: 35px;
-  background: #000;
-  padding: 10px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
-  overflow: hidden;
-}
-
-.slideshow-mall {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slideshow-mall img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 25px;
-  opacity: 0;
-  animation: mallLoop 6s infinite; 
-}
-
-.slideshow-mall img:nth-child(1) { animation-delay: 0s; }
-.slideshow-mall img:nth-child(2) { animation-delay: 3s; }
-
-@keyframes mallLoop {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  45% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-    /* Footer */
-    footer {
+    .footer {
       text-align: center;
-      padding: 30px;
-      background: #243b55;
-      color: white;
-      margin-top: 100px;
+      color: #7b6aa9;
+      font-weight: 700;
+      margin-top: 22px;
+      font-size: 14px;
     }
 
-    footer a {
-      color: white;
-      margin: 0 10px;
+    a {
+      color: #7d5be8;
+      font-weight: 800;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+        border-radius: 24px;
+      }
 
-    /* Mobile */
-    @media(max-width: 768px) {
-      .project { flex-direction: column; }
-      .project:nth-child(even) { flex-direction: column; }
-      .mockup { margin-top: 20px; }
+      .hero {
+        border-radius: 28px;
+      }
     }
   </style>
 </head>
 <body>
+  <main class="page">
+    <div class="container">
+      <header class="hero">
+        <h1>محاكيات بسمة</h1>
+        <p>شروط الاستخدام وسياسة الخصوصية</p>
+        <div class="badge">آخر تحديث: 9 مايو 2026</div>
+      </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="hero" data-aos="fade-down">
-    <div class="bubbles">
-      <span></span><span></span><span></span>
-      <span></span><span></span><span></span>
+      <section class="card">
+        <div class="tabs">
+          <button class="tab-button active" onclick="showTab('terms', this)">شروط الاستخدام</button>
+          <button class="tab-button" onclick="showTab('privacy', this)">سياسة الخصوصية</button>
+        </div>
+
+        <div id="terms" class="section active">
+          <h2>شروط الاستخدام</h2>
+
+          <div class="notice">
+            باستخدامك لتطبيق محاكيات بسمة، فإنك توافق على هذه الشروط. إذا كنت ولي أمر أو وصيًا، فأنت مسؤول عن استخدام الطفل للتطبيق.
+          </div>
+
+          <h3>1. عن التطبيق</h3>
+          <p>
+            محاكيات بسمة هو تطبيق ترفيهي وتعليمي موجه للأطفال، يقدم تجارب محاكاة بسيطة وآمنة مثل اللعب، الاستكشاف، والتفاعل مع عناصر مناسبة للأطفال.
+          </p>
+
+          <h3>2. الاستخدام المناسب</h3>
+          <ul>
+            <li>يجب استخدام التطبيق بطريقة آمنة ومناسبة للأطفال.</li>
+            <li>لا يجوز استخدام التطبيق لأي غرض غير قانوني أو ضار.</li>
+            <li>لا يجوز محاولة تعطيل التطبيق أو التلاعب بمحتواه أو أنظمته.</li>
+          </ul>
+
+          <h3>3. مسؤولية ولي الأمر</h3>
+          <p>
+            التطبيق مخصص للأطفال، لذلك يُنصح بأن يتم استخدامه تحت إشراف ولي الأمر، خصوصًا عند وجود مشتريات داخل التطبيق أو إعلانات.
+          </p>
+
+          <h3>4. الإعلانات والمشتريات داخل التطبيق</h3>
+          <p>
+            قد يحتوي التطبيق على إعلانات مناسبة للأطفال أو خيار شراء لإزالة الإعلانات. أي عملية شراء تتم من خلال متجر التطبيقات وتخضع لشروط المتجر المستخدم.
+          </p>
+
+          <h3>5. الملكية الفكرية</h3>
+          <p>
+            جميع الرسومات، الشخصيات، التصاميم، الأصوات، النصوص، والشعارات داخل التطبيق مملوكة لصاحب التطبيق، ولا يجوز نسخها أو إعادة استخدامها بدون إذن مسبق.
+          </p>
+
+          <h3>6. التحديثات والتغييرات</h3>
+          <p>
+            قد نقوم بتحديث التطبيق أو تعديل بعض المزايا أو هذه الشروط من وقت لآخر لتحسين التجربة أو الالتزام بالمتطلبات النظامية.
+          </p>
+
+          <h3>7. إخلاء المسؤولية</h3>
+          <p>
+            نسعى لتقديم تجربة آمنة وممتعة، لكن لا نضمن أن التطبيق سيكون خاليًا تمامًا من الأخطاء أو الانقطاعات. استخدام التطبيق يكون على مسؤولية المستخدم وولي الأمر.
+          </p>
+
+          <h3>8. التواصل</h3>
+          <p>
+            لأي استفسار بخصوص شروط الاستخدام، يمكن التواصل معنا عبر البريد الإلكتروني:
+            <a href="mailto:support@example.com">support@example.com</a>
+          </p>
+        </div>
+
+        <div id="privacy" class="section">
+          <h2>سياسة الخصوصية</h2>
+
+          <div class="notice">
+            نحن نهتم بخصوصية الأطفال. تم إعداد هذه السياسة لتوضيح طريقة التعامل مع البيانات داخل تطبيق محاكيات بسمة.
+          </div>
+
+          <h3>1. البيانات التي قد نجمعها</h3>
+          <p>
+            قد يجمع التطبيق بعض البيانات غير الحساسة لتحسين التجربة، مثل إعدادات التطبيق، اللغة، التقدم داخل اللعبة، أو عدد العملات الافتراضية داخل التطبيق.
+          </p>
+
+          <h3>2. بيانات الأطفال</h3>
+          <p>
+            لا نطلب من الأطفال إدخال معلومات شخصية حساسة مثل الاسم الكامل، العنوان، رقم الهاتف، أو البريد الإلكتروني. في حال وجود اسم داخل التطبيق، يكون لغرض تخصيص التجربة فقط.
+          </p>
+
+          <h3>3. الصور أو الملفات</h3>
+          <p>
+            إذا أتاح التطبيق مستقبلًا إضافة صورة أو اختيار شخصية، فسيتم استخدامها داخل التطبيق فقط ما لم يتم توضيح غير ذلك بشكل صريح.
+          </p>
+
+          <h3>4. الإعلانات</h3>
+          <p>
+            قد يعرض التطبيق إعلانات مناسبة للأطفال. نحرص قدر الإمكان على استخدام إعدادات إعلانية ملائمة للعمر وتجنب الإعلانات غير المناسبة.
+          </p>
+
+          <h3>5. المشتريات داخل التطبيق</h3>
+          <p>
+            قد يوفر التطبيق عملية شراء اختيارية، مثل إزالة الإعلانات. عمليات الدفع تتم من خلال متجر التطبيقات ولا نقوم بتخزين بيانات الدفع أو البطاقات البنكية.
+          </p>
+
+          <h3>6. خدمات الطرف الثالث</h3>
+          <p>
+            قد يستخدم التطبيق خدمات خارجية مثل خدمات التحليلات أو الإعلانات أو التخزين السحابي لتحسين الأداء. هذه الخدمات قد تجمع بيانات تقنية محدودة حسب سياساتها.
+          </p>
+
+          <h3>7. حماية البيانات</h3>
+          <p>
+            نستخدم إجراءات معقولة لحماية البيانات من الوصول غير المصرح به أو الاستخدام غير المناسب، ونسعى لتقليل جمع البيانات قدر الإمكان.
+          </p>
+
+          <h3>8. حقوق ولي الأمر</h3>
+          <p>
+            يمكن لولي الأمر التواصل معنا لطلب معرفة البيانات المرتبطة بالطفل أو طلب حذفها متى كان ذلك ممكنًا.
+          </p>
+
+          <h3>9. التغييرات على سياسة الخصوصية</h3>
+          <p>
+            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم تعديل تاريخ آخر تحديث عند نشر نسخة جديدة.
+          </p>
+
+          <h3>10. التواصل</h3>
+          <p>
+            لأي سؤال أو طلب متعلق بالخصوصية، يمكن التواصل معنا عبر البريد الإلكتروني:
+            <a href="mailto:support@example.com">support@example.com</a>
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2026 محاكيات بسمة. جميع الحقوق محفوظة.
+      </footer>
     </div>
-    <img src="IMG_3328.jpg" alt="Maher Ali">
-    <h1>Hi, I'm Maher Ali 👋</h1>
-    <div class="tagline">iOS & .NET Developer</div>
-    <p>
-      I graduated in 2021 as an Electrical Engineer, but honestly, my story with coding started way earlier. 
-      Back in 2011, I was already building small PC apps with Visual Basic and experimenting with Objective-C just to get iOS apps running.
-    </p>
-    <p>
-      Along the way, I explored C# with .NET, Python, and even MATLAB for fun technical projects. 
-      I also dived into 3D game development with Unity and Unreal Engine.
-    </p>
-    <p>
-      Today, I mainly focus on iOS development, while keeping the same curiosity that drives me to learn and experiment.
-    </p>
-    <div class="buttons">
-      <a href="mailto:eeng.maher@gmail.com" class="email"><i class="fas fa-envelope"></i>Email</a>
-      <a href="https://www.linkedin.com/in/engmaher" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://github.com/EngMaher96" target="_blank" class="github"><i class="fab fa-github"></i>GitHub</a>
-    </div>
-    <div class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">
-      ⬇ Scroll down to explore my work
-    </div>
-  </section>
+  </main>
 
-  <!-- PROJECTS SECTION -->
-  <div id="projects">
-    
-<div class="project" data-aos="fade-right">
-  <div class="text">
-    <h2>2011 – Mini Apps & First Experiments</h2>
-    <p>
-      Back in 2011, I started my coding journey by experimenting with small apps and simple games. 
-      Using Visual Basic, I built utilities like a basic PC browser and even a calculator. 
-      With Objective-C I explored iOS by creating mini apps such as <em>Zic Zax Zoe</em>. 
-      I also made a simple 2D running game for iOS where the player escapes from enemies.
-    </p>
-    <p>
-      These early projects gave me hands-on experience with Visual Basic, Objective-C, .NET basics, 
-      and 2D game mechanics. They weren’t perfect, but they shaped my learning curve and fueled my passion 
-      for software development.
-    </p>
-  </div>
-  <div class="image" data-aos="fade-left">
-    <img src="mini.jpg" alt="My Early Coding Journey" style="width:300px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.3);">
-  </div>
-</div>
-<div class="project" data-aos="fade-left">
-  <div class="text">
-    <h2>2014 – Basma (First App Store Launch)</h2>
-    <p>
-      <em>Basma</em> was the first app I successfully launched on the Apple App Store, marking the start of my official journey as an iOS developer. 
-      It was also the first time I registered on the Apple Developer Program and navigated Apple’s strict publishing requirements.
-    </p>
-    <p>
-      The app was a simple yet engaging educational platform designed to teach Arabic and English letters. 
-      When tapping on a letter, children could hear the correct pronunciation and see how it’s articulated. 
-      The app also included fun activities such as a drawing pad and a piano feature to keep learning interactive and enjoyable.
-    </p>
-    <p>
-      This project taught me how to build apps that meet Apple’s design and technical guidelines, and it gave me the confidence to move forward as a published iOS developer.
-    </p>
-  </div>
-
-  <!-- ✅ Pure CSS Slideshow -->
-  <div class="mockup landscape" data-aos="fade-right">
-    <div class="slideshow">
-      <img src="basma1.jpg" alt="Basma Screenshot 1">
-      <img src="basma2.jpg" alt="Basma Screenshot 2">
-      <img src="basma3.jpg" alt="Basma Screenshot 3">
-    </div>
-  </div>
-</div>
-
-
-
-
-  <div class="project" data-aos="fade-right">
-  <div class="text">
-    <h2>2016 – AddMe Social</h2>
-    <p>
-      <em>AddMe Social</em> was a social networking app designed to help users share their social media accounts 
-      and grow their followers more effectively. The goal was to create a simple way for people to promote their 
-      profiles and connect with others.
-    </p>
-    <p>
-      This project was a major milestone in my learning journey as it was the first time I used Swift, Apple’s new 
-      programming language, and integrated Firebase for real-time database features. 
-      It gave me hands-on experience building an online-enabled app and taught me how to connect iOS apps to cloud services.
-    </p>
-  </div>
-  <div class="mockup" data-aos="fade-left">
-    <img src="addme.png" alt="AddMe Social Screenshot">
-  </div>
-</div>
-
-<div class="project" data-aos="fade-left">
-  <div class="text">
-    <h2>2017 – AI Face Recognition App</h2>
-    <p>
-      In 2017, I built a simple app as part of my Artificial Intelligence course using MATLAB. 
-      The app could detect and recognize human faces by training it with multiple images for each person. 
-      Once trained, it could return details such as the person’s name, age, and other attributes.
-    </p>
-    <p>
-      The concept was inspired by potential real-world use cases, such as government ID systems or law enforcement, 
-      where fixed cameras could automatically identify wanted individuals.
-    </p>
-    <p>
-      This project gave me early hands-on exposure to AI concepts, face recognition algorithms, training datasets, 
-      and MATLAB programming, and it marked one of my first steps into applied artificial intelligence.
-    </p>
-  </div>
-  <div class="image" data-aos="fade-right">
-    <img src="ai-face.png" alt="AI Face Recognition Project" style="width:300px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.3);">
-  </div>
-</div>
-
-
-    <div class="project" data-aos="fade-left">
-  <div class="text">
-    <h2>2018 – Cross-Platform Restaurant System</h2>
-    <p>
-      As part of the Networks course at Taif University, I developed a complete restaurant system using Firebase. 
-      The solution included two iOS apps — one for customers and one for drivers — both built with Swift, 
-      and an admin application for the restaurant built in C#.
-    </p>
-    <p>
-      The system handled the full order lifecycle: browsing menus, placing orders, assigning drivers, live order tracking, 
-      and delivery confirmations. Firebase enabled real-time synchronization of order status and driver locations, 
-      while push notifications kept both customers and drivers updated instantly.
-    </p>
-    <p>
-      This project gave me valuable experience in building cross-platform systems and integrating multiple apps into a single ecosystem.
-    </p>
-  </div>
-  <div class="image" data-aos="fade-right">
-    <img src="restaurant-system.png" alt="Restaurant System Project" style="width:320px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.3);">
-  </div>
-</div>
-<div class="project" data-aos="fade-right">
-  <div class="text">
-    <h2>2019 – Basma (SwiftUI Redesign)</h2>
-    <p>
-      In 2019, I redesigned <em>Basma</em> using Apple’s new SwiftUI framework. 
-      This was my first serious step into focusing on UI/UX design and experimenting with smooth, interactive user interfaces. 
-      I also started learning the basics of animations, which made the app feel more alive and engaging.
-    </p>
-    <p>
-      For this version, I created a fresh, modern interface and improved usability while keeping the core idea 
-      of teaching Arabic and English letters with interactive activities.
-    </p>
-  </div>
-
-  <!-- Landscape with 2 videos -->
-  <div class="mockup landscape" data-aos="fade-left">
-    <div class="video-container">
-      <video class="v1" src="basma2019-1.mp4" autoplay muted playsinline></video>
-      <video class="v2" src="basma2019-2.mp4" muted playsinline style="display:none;"></video>
-    </div>
-  </div>
-</div>
-
-    <div class="project" data-aos="fade-right">
-  <div class="text">
-    <h2>2021 – Internal ERP for MRC (.NET/C# + SQL Server)</h2>
-    <p>
-      At MRC, I built an internal ERP-style system from scratch to organize daily operations for a small team. 
-      The application (developed in C# with .NET and SQL Server) covered sales, inventory, profit tracking, 
-      customer database/CRM, and more. It introduced a clear workflow for the company, centralized their data, 
-      and improved reporting visibility for decision-making.
-    </p>
-    <p>
-      Key features: sales & invoices, inventory and stock alerts, profit &amp; loss summaries, customer profiles and history, 
-      user permissions, and SQL-backed reporting dashboards.
-    </p>
-  </div>
-  <div class="image" data-aos="fade-left">
-    <!-- ضع لقطة شاشة للنظام هنا -->
-    <img src="mrc-erp.png" alt="MRC ERP System" 
-         style="width:320px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.3);">
-  </div>
-</div>
-
-    <div class="project" data-aos="fade-right">
-  <div class="text">
-    <h2>2022 – Mail App (SwiftUI)</h2>
-    <p>
-      I built <em>Mail App</em> to help fresh graduates apply to jobs quickly. With one tap, 
-      the app sends a pre-filled application email to multiple companies from a large, curated database. 
-      Users could filter companies by category and customize a short cover message before sending.
-    </p>
-    <p>
-      This project allowed me to practice SwiftUI for real-world forms, lists, and actions, 
-      while working with structured data and Mail integration.
-    </p>
-  </div>
-
-  <!-- ✅ Mockup العمودي مع الصور المتناوبة -->
-  <div class="mall-mockup" data-aos="fade-left">
-    <div class="slideshow-mall">
-      <img src="mailapp-1.png" alt="Mail App Screenshot 1">
-      <img src="mailapp-2.png" alt="Mail App Screenshot 2">
-    </div>
-  </div>
-</div>
-
-    <div class="project" data-aos="fade-left">
-  <div class="text">
-    <h2>2025 – Kawakib Basma (Work in Progress)</h2>
-    <p>
-      <em>Kawakib Basma</em> is my most ambitious and professional project so far. 
-      I’ve been working on it for the past two months, building it from the ground up 
-      with a large custom database and advanced animations.
-    </p>
-    <p>
-      The vision is to create a unique learning universe where the world is made of different planets, 
-      and each planet represents a dedicated theme or activity — for example, one planet for games, 
-      another for learning, another for creativity, and so on. This playful structure makes the app both fun 
-      and educational, keeping children engaged as they explore.
-    </p>
-    <p>
-      Technically, the project combines 2D and 3D games, interactive storytelling, and polished SwiftUI design 
-      with advanced animation techniques. Although still in the early stages, the project is shaping up 
-      to be something truly exciting and innovative.
-    </p>
-    <p>
-      This project represents my ongoing growth as a developer, pushing me to master new techniques 
-      in animation, data handling, and game development inside SwiftUI and beyond.
-    </p>
-  </div>
-
-  <!-- ✅ Video Mockup Vertical -->
-  <div class="mockup" data-aos="fade-right">
-    <video src="kawakib.mp4" autoplay muted loop playsinline></video>
-  </div>
-</div>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Maher Ali — All Rights Reserved</p>
-    <p>
-      <a href="https://github.com/EngMaher96" target="_blank">GitHub</a> | 
-      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a> | 
-      <a href="mailto:your@email.com">Email</a>
-    </p>
-  </footer>
-
-  <!-- AOS Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    function showTab(tabId, button) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      document.querySelectorAll('.tab-button').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      button.classList.add('active');
+    }
   </script>
-
-  <script>
-  let currentSlide = 0;
-const slides = document.querySelector(".slides");
-const totalSlides = slides.children.length;
-
-function showSlide(index) {
-  if (index >= totalSlides) {
-    currentSlide = 0;
-  } else if (index < 0) {
-    currentSlide = totalSlides - 1;
-  } else {
-    currentSlide = index;
-  }
-
-  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-// أزرار
-document.querySelector(".prev").addEventListener("click", () => showSlide(currentSlide - 1));
-document.querySelector(".next").addEventListener("click", () => showSlide(currentSlide + 1));
-
-// تشغيل تلقائي
-setInterval(() => {
-  showSlide(currentSlide + 1);
-}, 2000);
-
-
-</script>
-
-  <script>
-  // Loop between two videos forever (v1 -> v2 -> v1 ...)
-  document.querySelectorAll('.video-container').forEach(vc => {
-    const v1 = vc.querySelector('video.v1');
-    const v2 = vc.querySelector('video.v2');
-
-    if (!v1 || !v2) return;
-
-    // Helpers
-    function show(el){ el.style.display = 'block'; }
-    function hide(el){ el.style.display = 'none'; }
-
-    function playV1() {
-      v2.pause();
-      hide(v2);
-      show(v1);
-      v1.currentTime = 0;
-      v1.play().catch(()=>{ /* autoplay might be blocked without muted */ });
-    }
-
-    function playV2() {
-      v1.pause();
-      hide(v1);
-      show(v2);
-      v2.currentTime = 0;
-      v2.play().catch(()=>{});
-    }
-
-    // When each ends, switch to the other
-    v1.addEventListener('ended', playV2);
-    v2.addEventListener('ended', playV1);
-
-    // Safety: ensure v1 starts visible (iOS needs muted + playsinline, already set)
-    show(v1);
-    hide(v2);
-    // If autoplay was blocked, tap-to-play fallback
-    [v1, v2].forEach(v => {
-      v.addEventListener('click', () => v.play().catch(()=>{}));
-    });
-  });
-</script>
-  
 </body>
 </html>
+
