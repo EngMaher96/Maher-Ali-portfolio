@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شروط الاستخدام وسياسة الخصوصية - محاكيات بسمة</title>
+  <title>Terms of Use & Privacy Policy - Basma Hub</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -47,7 +48,6 @@
       height: 160px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.18);
-      filter: blur(1px);
     }
 
     .hero::before {
@@ -116,19 +116,24 @@
       font-weight: 900;
       color: #6b4fa5;
       background: linear-gradient(180deg, #ffffff, #f1e4ff);
-      box-shadow: inset 0 2px 0 rgba(255,255,255,0.9), 0 8px 0 #d9b8ff, 0 12px 20px rgba(95, 65, 150, 0.16);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.9),
+        0 8px 0 #d9b8ff,
+        0 12px 20px rgba(95, 65, 150, 0.16);
+      transition: 0.2s;
     }
 
     .tab-button.active {
       color: white;
       background: linear-gradient(180deg, #ff9ddd, #9b78ff);
-      box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 8px 0 #7a58d3, 0 12px 20px rgba(95, 65, 150, 0.18);
+      box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.5),
+        0 8px 0 #7a58d3,
+        0 12px 20px rgba(95, 65, 150, 0.18);
     }
 
     .tab-button:active {
-      transform: translateY(5px);
-      box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 3px 0 #b995ed, 0 8px 14px rgba(95, 65, 150, 0.14);
+      transform: translateY(4px);
     }
 
     .section {
@@ -141,8 +146,14 @@
     }
 
     @keyframes pop {
-      from { opacity: 0; transform: translateY(8px) scale(0.99); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     h2 {
@@ -162,7 +173,7 @@
     }
 
     ul {
-      padding-right: 22px;
+      padding-left: 22px;
     }
 
     .notice {
@@ -201,140 +212,191 @@
     }
   </style>
 </head>
+
 <body>
   <main class="page">
     <div class="container">
+
       <header class="hero">
-        <h1>محاكيات بسمة</h1>
-        <p>شروط الاستخدام وسياسة الخصوصية</p>
-        <div class="badge">آخر تحديث: 9 مايو 2026</div>
+        <h1>Basma Hub</h1>
+        <p>Terms of Use & Privacy Policy</p>
+        <div class="badge">Last Updated: May 9, 2026</div>
       </header>
 
       <section class="card">
+
         <div class="tabs">
-          <button class="tab-button active" onclick="showTab('terms', this)">شروط الاستخدام</button>
-          <button class="tab-button" onclick="showTab('privacy', this)">سياسة الخصوصية</button>
+          <button class="tab-button active" onclick="showTab('terms', this)">
+            Terms of Use
+          </button>
+
+          <button class="tab-button" onclick="showTab('privacy', this)">
+            Privacy Policy
+          </button>
         </div>
 
+        <!-- TERMS -->
         <div id="terms" class="section active">
-          <h2>شروط الاستخدام</h2>
+
+          <h2>Terms of Use</h2>
 
           <div class="notice">
-            باستخدامك لتطبيق محاكيات بسمة، فإنك توافق على هذه الشروط. إذا كنت ولي أمر أو وصيًا، فأنت مسؤول عن استخدام الطفل للتطبيق.
+            By using Basma Hub, you agree to these terms.
+            If you are a parent or guardian, you are responsible
+            for your child’s use of the app.
           </div>
 
-          <h3>1. عن التطبيق</h3>
+          <h3>1. About the App</h3>
           <p>
-            محاكيات بسمة هو تطبيق ترفيهي وتعليمي موجه للأطفال، يقدم تجارب محاكاة بسيطة وآمنة مثل اللعب، الاستكشاف، والتفاعل مع عناصر مناسبة للأطفال.
+            Basma Hub is an educational and entertainment app
+            for children that provides safe and simple simulator
+            experiences designed for fun, exploration,
+            and interactive play.
           </p>
 
-          <h3>2. الاستخدام المناسب</h3>
+          <h3>2. Appropriate Use</h3>
           <ul>
-            <li>يجب استخدام التطبيق بطريقة آمنة ومناسبة للأطفال.</li>
-            <li>لا يجوز استخدام التطبيق لأي غرض غير قانوني أو ضار.</li>
-            <li>لا يجوز محاولة تعطيل التطبيق أو التلاعب بمحتواه أو أنظمته.</li>
+            <li>The app must be used safely and appropriately for children.</li>
+            <li>The app may not be used for illegal or harmful purposes.</li>
+            <li>You may not attempt to disrupt or misuse the app or its systems.</li>
           </ul>
 
-          <h3>3. مسؤولية ولي الأمر</h3>
+          <h3>3. Parent Responsibility</h3>
           <p>
-            التطبيق مخصص للأطفال، لذلك يُنصح بأن يتم استخدامه تحت إشراف ولي الأمر، خصوصًا عند وجود مشتريات داخل التطبيق أو إعلانات.
+            This app is designed for children, and parental supervision
+            is recommended, especially for in-app purchases or advertisements.
           </p>
 
-          <h3>4. الإعلانات والمشتريات داخل التطبيق</h3>
+          <h3>4. Ads & In-App Purchases</h3>
           <p>
-            قد يحتوي التطبيق على إعلانات مناسبة للأطفال أو خيار شراء لإزالة الإعلانات. أي عملية شراء تتم من خلال متجر التطبيقات وتخضع لشروط المتجر المستخدم.
+            The app may contain child-friendly advertisements
+            or optional purchases such as removing ads.
+            All purchases are processed through the App Store.
           </p>
 
-          <h3>5. الملكية الفكرية</h3>
+          <h3>5. Intellectual Property</h3>
           <p>
-            جميع الرسومات، الشخصيات، التصاميم، الأصوات، النصوص، والشعارات داخل التطبيق مملوكة لصاحب التطبيق، ولا يجوز نسخها أو إعادة استخدامها بدون إذن مسبق.
+            All artwork, characters, designs, sounds,
+            texts, and logos within the app are owned
+            by the app owner and may not be copied
+            or reused without permission.
           </p>
 
-          <h3>6. التحديثات والتغييرات</h3>
+          <h3>6. Updates & Changes</h3>
           <p>
-            قد نقوم بتحديث التطبيق أو تعديل بعض المزايا أو هذه الشروط من وقت لآخر لتحسين التجربة أو الالتزام بالمتطلبات النظامية.
+            We may update the app or modify features
+            and policies from time to time to improve
+            the experience or comply with legal requirements.
           </p>
 
-          <h3>7. إخلاء المسؤولية</h3>
+          <h3>7. Disclaimer</h3>
           <p>
-            نسعى لتقديم تجربة آمنة وممتعة، لكن لا نضمن أن التطبيق سيكون خاليًا تمامًا من الأخطاء أو الانقطاعات. استخدام التطبيق يكون على مسؤولية المستخدم وولي الأمر.
+            We strive to provide a safe and enjoyable experience,
+            but we do not guarantee that the app will always
+            be free from errors or interruptions.
           </p>
 
-          <h3>8. التواصل</h3>
+          <h3>8. Contact</h3>
           <p>
-            لأي استفسار بخصوص شروط الاستخدام، يمكن التواصل معنا عبر البريد الإلكتروني:
-            <a href="mailto:support@example.com">support@example.com</a>
+            For questions regarding these Terms of Use,
+            contact us at:
+            <a href="mailto:support@example.com">
+              support@example.com
+            </a>
           </p>
+
         </div>
 
+        <!-- PRIVACY -->
         <div id="privacy" class="section">
-          <h2>سياسة الخصوصية</h2>
+
+          <h2>Privacy Policy</h2>
 
           <div class="notice">
-            نحن نهتم بخصوصية الأطفال. تم إعداد هذه السياسة لتوضيح طريقة التعامل مع البيانات داخل تطبيق محاكيات بسمة.
+            We care about children’s privacy.
+            This policy explains how data may be handled within Basma Hub.
           </div>
 
-          <h3>1. البيانات التي قد نجمعها</h3>
+          <h3>1. Data We May Collect</h3>
           <p>
-            قد يجمع التطبيق بعض البيانات غير الحساسة لتحسين التجربة، مثل إعدادات التطبيق، اللغة، التقدم داخل اللعبة، أو عدد العملات الافتراضية داخل التطبيق.
+            The app may collect limited non-sensitive information
+            to improve the experience, such as language settings,
+            game progress, or virtual coins.
           </p>
 
-          <h3>2. بيانات الأطفال</h3>
+          <h3>2. Children's Data</h3>
           <p>
-            لا نطلب من الأطفال إدخال معلومات شخصية حساسة مثل الاسم الكامل، العنوان، رقم الهاتف، أو البريد الإلكتروني. في حال وجود اسم داخل التطبيق، يكون لغرض تخصيص التجربة فقط.
+            We do not request sensitive personal information from children
+            such as full names, addresses, phone numbers, or email addresses.
           </p>
 
-          <h3>3. الصور أو الملفات</h3>
+          <h3>3. Photos & Files</h3>
           <p>
-            إذا أتاح التطبيق مستقبلًا إضافة صورة أو اختيار شخصية، فسيتم استخدامها داخل التطبيق فقط ما لم يتم توضيح غير ذلك بشكل صريح.
+            If future features allow profile images or character customization,
+            they will only be used inside the app unless stated otherwise.
           </p>
 
-          <h3>4. الإعلانات</h3>
+          <h3>4. Advertisements</h3>
           <p>
-            قد يعرض التطبيق إعلانات مناسبة للأطفال. نحرص قدر الإمكان على استخدام إعدادات إعلانية ملائمة للعمر وتجنب الإعلانات غير المناسبة.
+            The app may display child-friendly ads.
+            We aim to use age-appropriate advertising settings whenever possible.
           </p>
 
-          <h3>5. المشتريات داخل التطبيق</h3>
+          <h3>5. In-App Purchases</h3>
           <p>
-            قد يوفر التطبيق عملية شراء اختيارية، مثل إزالة الإعلانات. عمليات الدفع تتم من خلال متجر التطبيقات ولا نقوم بتخزين بيانات الدفع أو البطاقات البنكية.
+            Optional purchases such as removing ads may be available.
+            Payments are processed by the App Store,
+            and we do not store payment information.
           </p>
 
-          <h3>6. خدمات الطرف الثالث</h3>
+          <h3>6. Third-Party Services</h3>
           <p>
-            قد يستخدم التطبيق خدمات خارجية مثل خدمات التحليلات أو الإعلانات أو التخزين السحابي لتحسين الأداء. هذه الخدمات قد تجمع بيانات تقنية محدودة حسب سياساتها.
+            The app may use third-party services such as analytics,
+            ads, or cloud storage to improve performance and functionality.
           </p>
 
-          <h3>7. حماية البيانات</h3>
+          <h3>7. Data Protection</h3>
           <p>
-            نستخدم إجراءات معقولة لحماية البيانات من الوصول غير المصرح به أو الاستخدام غير المناسب، ونسعى لتقليل جمع البيانات قدر الإمكان.
+            We use reasonable measures to help protect information
+            from unauthorized access or misuse and aim to minimize
+            data collection whenever possible.
           </p>
 
-          <h3>8. حقوق ولي الأمر</h3>
+          <h3>8. Parent Rights</h3>
           <p>
-            يمكن لولي الأمر التواصل معنا لطلب معرفة البيانات المرتبطة بالطفل أو طلب حذفها متى كان ذلك ممكنًا.
+            Parents or guardians may contact us to request access to
+            or deletion of child-related data whenever possible.
           </p>
 
-          <h3>9. التغييرات على سياسة الخصوصية</h3>
+          <h3>9. Changes to This Policy</h3>
           <p>
-            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم تعديل تاريخ آخر تحديث عند نشر نسخة جديدة.
+            We may update this Privacy Policy from time to time.
+            The latest update date will always appear on this page.
           </p>
 
-          <h3>10. التواصل</h3>
+          <h3>10. Contact</h3>
           <p>
-            لأي سؤال أو طلب متعلق بالخصوصية، يمكن التواصل معنا عبر البريد الإلكتروني:
-            <a href="mailto:support@example.com">support@example.com</a>
+            For privacy-related questions or requests,
+            contact us at:
+            <a href="mailto:support@example.com">
+              support@example.com
+            </a>
           </p>
+
         </div>
+
       </section>
 
       <footer class="footer">
-        © 2026 محاكيات بسمة. جميع الحقوق محفوظة.
+        © 2026 Basma Hub. All rights reserved.
       </footer>
+
     </div>
   </main>
 
   <script>
     function showTab(tabId, button) {
+
       document.querySelectorAll('.section').forEach(section => {
         section.classList.remove('active');
       });
@@ -347,6 +409,6 @@
       button.classList.add('active');
     }
   </script>
+
 </body>
 </html>
-
